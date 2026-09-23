@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1221" />
+<title>7天AI自媒体起号工作台</title>
+<style>
+:root{--bg:#0b0e1a; --bg2:#12162a; --card:rgba(255,255,255,0.05); --card-hover:rgba(255,255,255,0.08); --border:rgba(255,255,255,0.1); --text:#f2f4ff; --muted:#9aa3c7; --accent:#7c6cff; --accent2:#22d3ee; --accent3:#f472b6; --ok:#34d399; --warn:#fbbf24; --danger:#fb7185; --radius:16px; --shadow:0 10px 40px rgba(0,0,0,.35); --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif}*{box-sizing:border-box; margin:0; padding:0}html{scroll-behavior:smooth}body{font-family:var(--font); background:radial-gradient(1200px 600px at 10% -10%, #2a1f6e 0%, transparent 50%), radial-gradient(900px 500px at 100% 0%, #0e3a4a 0%, transparent 45%), var(--bg); color:var(--text); min-height:100vh; line-height:1.65; -webkit-font-smoothing:antialiased}a{color:var(--accent2); text-decoration:none}.wrap{max-width:1100px; margin:0 auto; padding:20px 16px 80px}header.hero{position:relative; padding:28px 22px; border-radius:24px; background:linear-gradient(135deg, rgba(124,108,255,.25), rgba(34,211,238,.12) 50%, rgba(244,114,182,.15)); border:1px solid var(--border); box-shadow:var(--shadow); overflow:hidden; margin-bottom:18px}header.hero::after{content:""; position:absolute; inset:auto -20% -40% 40%; height:200px; background:radial-gradient(circle, rgba(124,108,255,.35), transparent 70%); pointer-events:none}.badge{display:inline-flex; align-items:center; gap:6px; font-size:12px; letter-spacing:.04em; padding:4px 10px; border-radius:999px; background:rgba(255,255,255,.1); border:1px solid var(--border); color:var(--muted); margin-bottom:10px}h1{font-size:clamp(1.55rem, 4.5vw, 2.15rem); font-weight:800; letter-spacing:-.02em; background:linear-gradient(90deg, #fff, #c4b5fd 40%, #67e8f9); -webkit-background-clip:text; background-clip:text; color:transparent}.subtitle{color:var(--muted); margin-top:8px; font-size:14px; max-width:640px}.hero-meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}.pill{font-size:12px; padding:6px 12px; border-radius:999px; background:rgba(0,0,0,.25); border:1px solid var(--border); color:var(--text)}.progress-bar-wrap{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); background:rgba(11,14,26,.82); border-bottom:1px solid var(--border); padding:10px 16px; margin:0 -16px 18px}.progress-inner{max-width:1100px; margin:0 auto}.progress-label{display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted); margin-bottom:6px}.progress-label strong{color:var(--ok); font-size:15px}.track{height:10px; border-radius:999px; background:rgba(255,255,255,.08); overflow:hidden}.fill{height:100%; width:0%; border-radius:999px; background:linear-gradient(90deg, var(--accent), var(--accent2)); transition:width .35s ease; box-shadow:0 0 16px rgba(124,108,255,.5)}nav.tabs{display:flex; gap:6px; overflow-x:auto; padding-bottom:4px; margin-bottom:18px; scrollbar-width:none}nav.tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto; border:1px solid var(--border); background:var(--card); color:var(--muted); padding:8px 14px; border-radius:999px; font-size:13px; cursor:pointer; transition:.2s; white-space:nowrap}.tab:hover{background:var(--card-hover); color:var(--text)}.tab.active{color:#fff; border-color:transparent; background:linear-gradient(135deg, var(--accent), #5b8def); box-shadow:0 4px 16px rgba(124,108,255,.35)}section.panel{display:none; animation:fade .3s ease}section.panel.active{display:block}@keyframes fade{from{opacity:0; transform:translateY(6px)}to{opacity:1; transform:none}}h2{font-size:1.25rem; margin:8px 0 14px; display:flex; align-items:center; gap:8px}h2 .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--accent), var(--accent2))}h3{font-size:1rem; margin:18px 0 10px; color:#e0e7ff}.lead{color:var(--muted); font-size:14px; margin-bottom:14px}.grid{display:grid; gap:14px}.grid-2{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}.grid-3{grid-template-columns:repeat(auto-fit, minmax(220px, 1fr))}.card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px 16px 14px; transition:.2s}.card:hover{background:var(--card-hover); border-color:rgba(124,108,255,.35)}.card.featured{background:linear-gradient(160deg, rgba(124,108,255,.18), rgba(34,211,238,.06)); border-color:rgba(124,108,255,.4)}.card-title{font-weight:700; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:8px}.tag{font-size:11px; padding:2px 8px; border-radius:6px; background:rgba(124,108,255,.25); color:#c4b5fd}.tag.cyan{background:rgba(34,211,238,.2); color:#67e8f9}.tag.pink{background:rgba(244,114,182,.2); color:#f9a8d4}.tag.green{background:rgba(52,211,153,.2); color:#6ee7b7}.tag.amber{background:rgba(251,191,36,.2); color:#fcd34d}.checklist{list-style:none}.checklist li{display:flex; align-items:flex-start; gap:10px; padding:10px 8px; border-radius:10px; border-bottom:1px dashed rgba(255,255,255,.06)}.checklist li:last-child{border-bottom:none}.checklist li:hover{background:rgba(255,255,255,.03)}.checklist input[type="checkbox"]{appearance:none; -webkit-appearance:none; width:20px; height:20px; min-width:20px; margin-top:2px; border:2px solid rgba(255,255,255,.3); border-radius:6px; cursor:pointer; position:relative; background:rgba(0,0,0,.25); transition:.15s}.checklist input[type="checkbox"]:checked{background:linear-gradient(135deg, var(--accent), var(--accent2)); border-color:transparent}.checklist input[type="checkbox"]:checked::after{content:"✓"; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:700}.checklist label{cursor:pointer; font-size:14px; flex:1; transition:.2s}.checklist input:checked + label{color:var(--muted); text-decoration:line-through; text-decoration-color:rgba(154,163,199,.5)}.hint{font-size:12px; color:var(--muted); margin-top:4px; display:block}.day-nav{display:flex; gap:6px; overflow-x:auto; margin-bottom:14px; scrollbar-width:none}.day-nav::-webkit-scrollbar{display:none}.day-btn{flex:0 0 auto; min-width:64px; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:var(--card); color:var(--muted); cursor:pointer; text-align:center; font-size:12px}.day-btn strong{display:block; font-size:14px; color:var(--text)}.day-btn.active{background:linear-gradient(135deg, rgba(244,114,182,.3), rgba(124,108,255,.35)); border-color:rgba(244,114,182,.5); color:#fff}.day-btn.done{outline:1px solid rgba(52,211,153,.5)}.day-panel{display:none}.day-panel.active{display:block; animation:fade .25s ease}.title-list{display:grid; gap:8px}.title-item{display:flex; gap:8px; align-items:center; background:rgba(0,0,0,.25); border:1px solid var(--border); border-radius:12px; padding:10px 12px}.title-item span{flex:1; font-size:14px}.btn{border:none; cursor:pointer; border-radius:10px; padding:8px 12px; font-size:12px; font-weight:600; background:linear-gradient(135deg, var(--accent), #5b8def); color:#fff; white-space:nowrap; transition:.15s}.btn:hover{filter:brightness(1.1); transform:translateY(-1px)}.btn.ghost{background:transparent; border:1px solid var(--border); color:var(--muted)}.btn.sm{padding:6px 10px; font-size:11px}.copied{color:var(--ok) !important; border-color:var(--ok) !important}.steps{counter-reset:step; list-style:none}.steps li{position:relative; padding:14px 14px 14px 52px; margin-bottom:10px; border-radius:14px; background:var(--card); border:1px solid var(--border)}.steps li::before{counter-increment:step; content:counter(step); position:absolute; left:14px; top:14px; width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg, var(--accent), var(--accent2)); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:13px}.formula{margin:12px 0; padding:14px 16px; border-radius:14px; background:linear-gradient(90deg, rgba(124,108,255,.2), rgba(34,211,238,.1)); border-left:3px solid var(--accent2); font-weight:600; font-size:14px}footer.sources{margin-top:28px; padding:18px; border-radius:var(--radius); background:rgba(0,0,0,.3); border:1px solid var(--border); font-size:12px; color:var(--muted)}footer.sources ol{margin:8px 0 0 18px}footer.sources li{margin-bottom:4px}.toolbar{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 4px}.stat-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px}.stat{flex:1 1 120px; padding:12px; border-radius:14px; background:rgba(0,0,0,.25); border:1px solid var(--border); text-align:center}.stat b{display:block; font-size:1.35rem; color:var(--accent2)}.stat span{font-size:12px; color:var(--muted)}.toast{position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px); background:#1e293b; color:#fff; padding:10px 18px; border-radius:999px; font-size:13px; opacity:0; pointer-events:none; transition:.25s; border:1px solid var(--border); z-index:100; box-shadow:var(--shadow)}.toast.show{opacity:1; transform:translateX(-50%) translateY(0)}@media (max-width:560px){.wrap{padding:14px 12px 70px}header.hero{padding:20px 16px}.progress-bar-wrap{margin:0 -12px 14px}}
+
+</style>
+</head>
+<body>
+<div class="wrap"><header class="hero"><div class="badge">🚀 AI 自媒体 · 起号实战工作台</div><h1>7天AI自媒体起号工作台</h1><p class="subtitle">把亦仁定位、Elaine 0粉6天模板、西门聪明蛋 / 阿甜 / nana / 竹子的实战洞察，编成可勾选清单与日计划。进度本地保存，手机也能用。</p><div class="hero-meta"><span class="pill">主模板：Elaine 0粉6天</span><span class="pill">目标：一周≥1商单意向</span><span class="pill">公式：细分领域 + 专家IP + 偏术少道</span></div></header><div class="progress-bar-wrap"><div class="progress-inner"><div class="progress-label"><span>总体完成进度</span><strong id="progressText">0%</strong></div><div class="track"><div class="fill" id="progressFill"></div></div></div></div><nav class="tabs" id="mainTabs" aria-label="主导航"><button class="tab active" data-panel="insight">定位洞察</button><button class="tab" data-panel="board">7天看板</button><button class="tab" data-panel="benchmark">对标库</button><button class="tab" data-panel="titles">选题标题</button><button class="tab" data-panel="sop">商单SOP</button><button class="tab" data-panel="sources">资料来源</button></nav><!-- ===== 定位洞察 ===== --><section class="panel active" id="panel-insight"><h2><span class="dot"></span>核心定位 · 可执行清单</h2><p class="lead">先对齐「做什么 / 不做什么」，再开干。勾选即写入本机 localStorage。</p><div class="stat-row"><div class="stat"><b id="statDone">0</b><span>已完成项</span></div><div class="stat"><b id="statTotal">0</b><span>清单总项</span></div><div class="stat"><b id="statDay">Day0</b><span>建议当前日</span></div></div><div class="toolbar"><button class="btn ghost sm" id="btnReset" type="button">重置全部勾选</button><button class="btn ghost sm" id="btnExport" type="button">导出进度 JSON</button></div><div class="grid grid-2" style="margin-top:14px"><article class="card featured"><div class="card-title">亦仁定位 <span class="tag">渠道思维</span></div><div class="formula">AI自媒体 ≠ 用AI灌内容<br/>= 成为 AI 产品 / 新闻 / 资讯 / 场景的<strong>渠道</strong></div><ul class="checklist" data-group="yiren"><li><input type="checkbox" id="y1" data-key="y1" /><label for="y1">记住双重红利：用户兴趣流量 + 大厂投放预算不设上限<span class="hint">盯平台 AI 广告消耗，小粉也有预算</span></label></li><li><input type="checkbox" id="y2" data-key="y2" /><label for="y2">理解变现锚点：小红书几万粉可接豆包约 8000 量级（参考案例）</label></li><li><input type="checkbox" id="y3" data-key="y3" /><label for="y3">写下自己的公式：细分领域 + 专家IP + 偏术少道<span class="hint">深耕不换标签，不做泛 AI 搬运号</span></label></li><li><input type="checkbox" id="y4" data-key="y4" /><label for="y4">明确：做「场景渠道」而非「AI 水文工厂」</label></li></ul></article><article class="card featured"><div class="card-title">Elaine 主执行模板 <span class="tag pink">0粉6天</span></div><p class="lead" style="margin:0 0 8px">定位：AI工具分享 + 商单变现。对标筛选与复刻节奏如下。</p><ul class="checklist" data-group="elaine"><li><input type="checkbox" id="e1" data-key="e1" /><label for="e1">对标标准：一周≥1商单；1–2月内有变现；主对标 5k–2万粉</label></li><li><input type="checkbox" id="e2" data-key="e2" /><label for="e2">内容目标：≥5 条千赞；成本低；变现优先于虚荣数据</label></li><li><input type="checkbox" id="e3" data-key="e3" /><label for="e3">执行：复刻加大信息密度；新号建议一日三更</label></li><li><input type="checkbox" id="e4" data-key="e4" /><label for="e4">商单原则：不主动降价；精准场景演示 ＞ 泛流量爆款</label></li><li><input type="checkbox" id="e5" data-key="e5" /><label for="e5">记住参考节奏：3天蒲公英 / 3天百万播放 / 6天首单 / 3周约9k粉<span class="hint">来自 Elaine 分享的节奏参考，非保证结果</span></label></li></ul></article><article class="card"><div class="card-title">西门聪明蛋 <span class="tag amber">搞钱女孩·外滩大会</span></div><ul class="checklist" data-group="ximen"><li><input type="checkbox" id="x1" data-key="x1" /><label for="x1">路径对齐：公域 → 广告 + 知识付费</label></li><li><input type="checkbox" id="x2" data-key="x2" /><label for="x2">时间线参考：1月AI编程 → 2月自媒体 → 4月裸辞；半年约10万粉；月入约5万<span class="hint">2026外滩大会分享口径</span></label></li><li><input type="checkbox" id="x3" data-key="x3" /><label for="x3">表达：多用动词；上下文复利；抓住注意力</label></li></ul></article><article class="card"><div class="card-title">年轻朋友阿甜 <span class="tag cyan">一人公司</span></div><ul class="checklist" data-group="atian"><li><input type="checkbox" id="a1" data-key="a1" /><label for="a1">采用 Codex / 一人公司工作流（内容生产与工具链打通）</label></li><li><input type="checkbox" id="a2" data-key="a2" /><label for="a2">内容策略：信息差搬运 + 成长记录</label></li><li><input type="checkbox" id="a3" data-key="a3" /><label for="a3">设计闭环：内容 → 产品 → 社群</label></li></ul></article><article class="card"><div class="card-title">nana <span class="tag green">抖音起号</span></div><ul class="checklist" data-group="nana"><li><input type="checkbox" id="n1" data-key="n1" /><label for="n1">参考：抖音约1月2.5万粉；百粉阶段即可收商单意向</label></li><li><input type="checkbox" id="n2" data-key="n2" /><label for="n2">节奏参考：第15天四位数商单；报价 2500 起</label></li><li><input type="checkbox" id="n3" data-key="n3" /><label for="n3">选型：工具号 vs 真人商业IP —— 先选定一条深耕</label></li></ul></article><article class="card"><div class="card-title">竹子 <span class="tag">小红书广告</span></div><ul class="checklist" data-group="zhuzi"><li><input type="checkbox" id="z1" data-key="z1" /><label for="z1">参考：小红书约1.5万粉；2026约8个月约60个广告；月广告过万</label></li><li><input type="checkbox" id="z2" data-key="z2" /><label for="z2">定位升级：从「教人用AI」→「用AI帮人解决问题」</label></li><li><input type="checkbox" id="z3" data-key="z3" /><label for="z3">新手可先做工具教程，再切场景解题</label></li></ul></article></div></section><!-- ===== 7天看板 ===== --><section class="panel" id="panel-board"><h2><span class="dot"></span>7天交互看板</h2><p class="lead">按 Day0–Day7 推进。每天勾选任务，进度条自动更新。</p><div class="day-nav" id="dayNav"></div><div id="dayPanels"></div></section><!-- ===== 对标库 ===== --><section class="panel" id="panel-benchmark"><h2><span class="dot"></span>对标库卡片</h2><p class="lead">选 1 个主对标 + 3 个次对标。用 Elaine 标准筛，不要追百万大号。</p><div class="grid grid-2"><article class="card featured"><div class="card-title">主对标画像 <span class="tag pink">必填</span></div><ul class="checklist" data-group="bench"><li><input type="checkbox" id="b1" data-key="b1" /><label for="b1">粉丝 5k–2万；近30天有稳定更新</label></li><li><input type="checkbox" id="b2" data-key="b2" /><label for="b2">可见商单 / 合作痕迹（一周≥1 更佳）</label></li><li><input type="checkbox" id="b3" data-key="b3" /><label for="b3">有 ≥5 条千赞或同级互动结构可拆</label></li><li><input type="checkbox" id="b4" data-key="b4" /><label for="b4">成本低可复刻（口播/录屏/图文均可）</label></li><li><input type="checkbox" id="b5" data-key="b5" /><label for="b5">已记录：账号名、代表作链接、爆款结构笔记</label></li></ul></article><article class="card"><div class="card-title">次对标 ×3 <span class="tag cyan">结构互补</span></div><ul class="checklist" data-group="bench2"><li><input type="checkbox" id="b6" data-key="b6" /><label for="b6">次对标A：合集/清单体（信息密度高）</label></li><li><input type="checkbox" id="b7" data-key="b7" /><label for="b7">次对标B：平替对比体（决策型）</label></li><li><input type="checkbox" id="b8" data-key="b8" /><label for="b8">次对标C：场景解题体（伪装广告友好）</label></li><li><input type="checkbox" id="b9" data-key="b9" /><label for="b9">三人拆解表已完成（钩子/中间/结尾/封面）</label></li></ul></article><article class="card"><div class="card-title">Elaine 节奏卡</div><p style="font-size:14px;color:var(--muted)">3天进蒲公英 · 3天冲百万级播放参考 · 6天冲首单 · 3周粉量约9k 参考。用于排期，不当保证。</p></article><article class="card"><div class="card-title">避坑</div><ul style="font-size:14px;color:var(--muted);padding-left:18px"><li>不对标虚荣大号（难复刻、难接精准单）</li><li>不换标签追热点稀释专家感</li><li>不把「AI灌文」当内容壁垒</li></ul></article></div></section><!-- ===== 选题标题 ===== --><section class="panel" id="panel-titles"><h2><span class="dot"></span>可复制选题标题（≥8）</h2><p class="lead">偏术少道 · 场景演示优先。点击复制到剪贴板。</p><div class="title-list" id="titleList"></div><h3>选题库自检</h3><ul class="checklist" data-group="topics"><li><input type="checkbox" id="t1" data-key="t1" /><label for="t1">已备 ≥14 条选题（合集 / 平替 / 场景 三类配齐）</label></li><li><input type="checkbox" id="t2" data-key="t2" /><label for="t2">每条标题带具体场景或数字钩子</label></li><li><input type="checkbox" id="t3" data-key="t3" /><label for="t3">至少 3 条可直接改成「伪装广告」精准场景演示</label></li></ul></section><!-- ===== 商单SOP ===== --><section class="panel" id="panel-sop"><h2><span class="dot"></span>商单 SOP & 报价策略</h2><p class="lead">变现优先于虚荣数据。不主动降价；用场景演示换信任。</p><ol class="steps"><li><strong>合作入口就绪</strong><br/>简介放「商务合作 / 邮箱或企微」；置顶作品集（3条最佳场景演示）。</li><li><strong>百粉也可收意向</strong><br/>参考 nana：百粉阶段收商单意向；第15天可冲四位数。</li><li><strong>报价锚点</strong><br/>参考：nana 报价 2500 起；亦仁提及小红书几万粉豆包约 8000 量级。按平台、粉丝、场景深度报价，<em>不主动降价</em>。</li><li><strong>脚本结构（精准场景＞泛爆款）</strong><br/>痛点开场 → 工具/产品在「真实任务」里演示 → 前后对比 → 合作 CTA。</li><li><strong>交付清单</strong><br/>脚本确认、素材权限、发布时间、二次修改次数、数据回传约定。</li><li><strong>复盘进下一单</strong><br/>记录：线索来源、报价、成交、制作时长，打磨 SOP。</li></ol><h3>接单准备清单</h3><ul class="checklist" data-group="sop"><li><input type="checkbox" id="s1" data-key="s1" /><label for="s1">简介 / 主页已写清合作入口</label></li><li><input type="checkbox" id="s2" data-key="s2" /><label for="s2">作品集置顶（合集+场景演示+平替各至少1）</label></li><li><input type="checkbox" id="s3" data-key="s3" /><label for="s3">报价单 / 价目表草稿（含修改次数）</label></li><li><input type="checkbox" id="s4" data-key="s4" /><label for="s4">商单口播脚本模板已保存</label></li><li><input type="checkbox" id="s5" data-key="s5" /><label for="s5">蒲公英或星图已开通/申请中</label></li><li><input type="checkbox" id="s6" data-key="s6" /><label for="s6">明确：不接与人设冲突的泛品</label></li></ul></section><!-- ===== 资料来源 ===== --><section class="panel" id="panel-sources"><h2><span class="dot"></span>资料来源脚注</h2><p class="lead">以下为公开分享中的帖名 / 节目名口径，数字为讲述者口述参考，不伪造、不作承诺。</p><footer class="sources" style="margin-top:0"><strong>Sources</strong><ol><li>亦仁 — AI 自媒体定位相关公开分享：强调「渠道」而非「AI灌内容」；双重红利（兴趣流量 + 大厂投放）；细分领域 + 专家IP + 偏术少道；小红书变现案例口述（含豆包量级合作参考）。</li><li>Elaine — 「0粉起号」实战分享：AI工具分享+商单变现；对标筛选标准；一日三更与信息密度；蒲公英/播放/首单/粉量节奏口述。</li><li>西门聪明蛋 — 2026 外滩大会「搞钱女孩」相关分享：公域→广告+知识付费路径；1月AI编程→2月自媒体→4月裸辞时间线；半年粉量与月入口述；多用动词与注意力。</li><li>年轻朋友阿甜 — Codex / 一人公司工作流分享：信息差搬运+成长记录；内容-产品-社群闭环。</li><li>nana — 抖音工具/商业IP起号分享：约1月粉量、百粉收意向、第15天商单、报价2500起等口述。</li><li>竹子 — 小红书 AI 向账号分享：约1.5万粉、2026约8个月广告单量与月广告口述；「教人用AI」vs「用AI帮人解决问题」。</li></ol><p style="margin-top:10px">本工作台为学习笔记式工具页，进度仅存于你的浏览器 localStorage，不上传服务器。</p></footer></section></div><div class="toast" id="toast"></div>
+<script>
+(function () {
+  const STORAGE_KEY = "ai-media-7day-workbench-v1";
+  const days = [
+    {
+      id: "d0", label: "Day0", title: "定方向",
+      items: [
+        ["d0a", "选定主平台：小红书 或 抖音（为主，另一为辅）"],
+        ["d0b", "写好人设一句话（细分领域 + 你能帮谁解决什么）"],
+        ["d0c", "注册/准备蒲公英（小红书）或星图（抖音）"],
+        ["d0d", "建选题库空表（至少预留14行）"]
+      ]
+    },
+    {
+      id: "d1", label: "Day1", title: "壳+对标",
+      items: [
+        ["d1a", "完成账号壳：头像、昵称、简介、背景、置顶栏"],
+        ["d1b", "选定 1 主对标 + 3 次对标（5k–2万粉优先）"],
+        ["d1c", "拆解对标爆款：钩子 / 结构 / 封面 / 标题"],
+        ["d1d", "产出 14 条选题（合集/平替/场景配齐）"]
+      ]
+    },
+    {
+      id: "d2", label: "Day2", title: "首发3条",
+      items: [
+        ["d2a", "发布第1条：合集/清单体（高信息密度）"],
+        ["d2b", "发布第2条：平替对比体"],
+        ["d2c", "发布第3条：真实场景解题体"],
+        ["d2d", "记录数据：完播、点赞、收藏、评论关键词"]
+      ]
+    },
+    {
+      id: "d3", label: "Day3", title: "日更加速",
+      items: [
+        ["d3a", "日更 2–3 条（新号可冲一日三更）"],
+        ["d3b", "冲刺开通/出现在蒲公英（或星图进度）"],
+        ["d3c", "打磨封面与标题：数字钩子 + 场景词"],
+        ["d3d", "复盘哪类结构更吃香，明日加注"]
+      ]
+    },
+    {
+      id: "d4", label: "Day4", title: "结构复刻",
+      items: [
+        ["d4a", "复刻1条对标爆款结构（加大信息密度，非照搬文案）"],
+        ["d4b", "做1条「伪装广告」：精准场景演示产品能力"],
+        ["d4c", "精准场景 ＞ 泛流量爆款 — 写进创作备忘"],
+        ["d4d", "互动区置顶：引导私信「合作/场景名」"]
+      ]
+    },
+    {
+      id: "d5", label: "Day5", title: "接单准备",
+      items: [
+        ["d5a", "简介加上合作入口（邮箱/企微）"],
+        ["d5b", "整理作品集置顶（3条代表作）"],
+        ["d5c", "报价策略草稿（参考2500起等锚点，不主动降价）"],
+        ["d5d", "准备可发的商务简介短段落"]
+      ]
+    },
+    {
+      id: "d6", label: "Day6", title: "爆款+SOP",
+      items: [
+        ["d6a", "集中火力冲1条爆款结构内容"],
+        ["d6b", "写好商单SOP脚本（痛点→演示→对比→CTA）"],
+        ["d6c", "明确报价与修改边界，练一次口述"],
+        ["d6d", "检查：是否已有商单意向线索可跟进"]
+      ]
+    },
+    {
+      id: "d7", label: "Day7", title: "周复盘",
+      items: [
+        ["d7a", "数据复盘：发布数、互动、线索、耗时"],
+        ["d7b", "内容复盘：哪类结构可规模化"],
+        ["d7c", "商业复盘：意向数、报价反馈、是否降价诱惑"],
+        ["d7d", "写下周计划：平台、日更量、对标更新、报价试验"]
+      ]
+    }
+  ];
+  const titles = [
+    "打工人下班2小时：用AI把周报从2小时压到15分钟",
+    "小红书运营别再瞎发！这5个AI场景直接省掉一半时间",
+    "ChatGPT / 豆包 / Kimi 写方案，我只认这个「场景拆解法」",
+    "学生党期末救星：AI做文献综述的正确打开方式（含提示词）",
+    "宝妈副业真实流程：用AI一天产出3条短视频脚本",
+    "设计师转行AI：我把客户改稿次数砍掉60%的工作流",
+    "别买课了！这3个免费AI工具组合够你接第一单",
+    "电商详情页：AI生成「卖点→场景→异议」一页通关模板",
+    "面试前一夜：用AI模拟HR追问，我的回答结构公开",
+    "自媒体起号第7天：我如何用「精准场景」替代泛流量标题"
+  ];
+  function loadState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+    catch { return {}; }
+  }
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+  let state = loadState();
+  // Render day board
+  const dayNav = document.getElementById("dayNav");
+  const dayPanels = document.getElementById("dayPanels");
+  days.forEach((day, idx) => {
+    const btn = document.createElement("button");
+    btn.className = "day-btn" + (idx === 0 ? " active" : "");
+    btn.type = "button";
+    btn.dataset.day = day.id;
+    btn.innerHTML = `<strong>${day.label}</strong>${day.title}`;
+    dayNav.appendChild(btn);
+    const panel = document.createElement("div");
+    panel.className = "day-panel card" + (idx === 0 ? " active" : "");
+    panel.id = "panel-" + day.id;
+    panel.innerHTML = `<div class="card-title">${day.label} · ${day.title}</div>
+      <ul class="checklist" data-group="${day.id}">
+        ${day.items.map(([key, text]) =>
+          `<li><input type="checkbox" id="${key}" data-key="${key}" /><label for="${key}">${text}</label></li>`
+        ).join("")}
+      </ul>`;
+    dayPanels.appendChild(panel);
+  });
+  dayNav.addEventListener("click", (e) => {
+    const btn = e.target.closest(".day-btn");
+    if (!btn) return;
+    dayNav.querySelectorAll(".day-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    dayPanels.querySelectorAll(".day-panel").forEach(p => p.classList.remove("active"));
+    document.getElementById("panel-" + btn.dataset.day).classList.add("active");
+  });
+  // Titles
+  const titleList = document.getElementById("titleList");
+  titles.forEach((t, i) => {
+    const row = document.createElement("div");
+    row.className = "title-item";
+    row.innerHTML = `<span>${i + 1}. ${t}</span><button class="btn sm ghost" type="button" data-copy="${encodeURIComponent(t)}">复制</button>`;
+    titleList.appendChild(row);
+  });
+  titleList.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-copy]");
+    if (!btn) return;
+    const text = decodeURIComponent(btn.dataset.copy);
+    try {
+      await navigator.clipboard.writeText(text);
+      btn.textContent = "已复制";
+      btn.classList.add("copied");
+      toast("已复制到剪贴板");
+      setTimeout(() => { btn.textContent = "复制"; btn.classList.remove("copied"); }, 1500);
+    } catch {
+      toast("复制失败，请长按手动复制");
+    }
+  });
+  // Tabs
+  document.getElementById("mainTabs").addEventListener("click", (e) => {
+    const tab = e.target.closest(".tab");
+    if (!tab) return;
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    document.querySelectorAll("section.panel").forEach(p => p.classList.remove("active"));
+    document.getElementById("panel-" + tab.dataset.panel).classList.add("active");
+  });
+  // Checkboxes
+  function applyState() {
+    document.querySelectorAll("input[type=checkbox][data-key]").forEach(cb => {
+      cb.checked = !!state[cb.dataset.key];
+    });
+    updateProgress();
+  }
+  function updateProgress() {
+    const boxes = [...document.querySelectorAll("input[type=checkbox][data-key]")];
+    const total = boxes.length;
+    const done = boxes.filter(b => b.checked).length;
+    const pct = total ? Math.round(done / total * 100) : 0;
+    document.getElementById("progressFill").style.width = pct + "%";
+    document.getElementById("progressText").textContent = pct + "% · " + done + "/" + total;
+    document.getElementById("statDone").textContent = done;
+    document.getElementById("statTotal").textContent = total;
+    // Suggest day: first day with incomplete items
+    let suggest = "Day7 ✓";
+    for (const day of days) {
+      const incomplete = day.items.some(([k]) => !state[k]);
+      if (incomplete) { suggest = day.label; break; }
+    }
+    document.getElementById("statDay").textContent = suggest;
+    // Mark day buttons done
+    days.forEach(day => {
+      const allDone = day.items.every(([k]) => state[k]);
+      const btn = dayNav.querySelector(`[data-day="${day.id}"]`);
+      if (btn) btn.classList.toggle("done", allDone);
+    });
+  }
+  document.body.addEventListener("change", (e) => {
+    if (e.target.matches("input[type=checkbox][data-key]")) {
+      state[e.target.dataset.key] = e.target.checked;
+      saveState(state);
+      updateProgress();
+    }
+  });
+  document.getElementById("btnReset").addEventListener("click", () => {
+    if (!confirm("确定重置全部勾选进度？")) return;
+    state = {};
+    saveState(state);
+    applyState();
+    toast("已重置");
+  });
+  document.getElementById("btnExport").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), state }, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "ai-media-7day-progress.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast("进度已导出");
+  });
+  function toast(msg) {
+    const el = document.getElementById("toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => el.classList.remove("show"), 1800);
+  }
+  applyState();
+})();
+
+</script>
+</body>
+</html>
